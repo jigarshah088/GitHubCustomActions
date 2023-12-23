@@ -24,5 +24,6 @@ runs :
         if: steps.cache.outputs.cache-hit != 'true' || inputs.caching == 'true'
         run: |
           npm ci
+          npm audit fix
           echo "Cache = '${{ inputs.caching }} '" >> $GITHUB_OUTPUT
         shell : bash
