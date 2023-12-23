@@ -25,5 +25,6 @@ runs :
         run: |
           npm ci
           npm audit fix
+          npm fund
           echo "Cache = '${{ inputs.caching }} '" >> $GITHUB_OUTPUT
         shell : bash
